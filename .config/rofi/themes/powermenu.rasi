@@ -1,0 +1,26 @@
+* {
+  font: "JetBrainsMono Nerd Font 13";
+}
+
+window {
+  width: 300px;
+  border-radius: 14px;
+  background-color: rgba(30, 30, 46, 0.95);
+}
+
+listview {
+  lines: 5;
+  spacing: 10px;
+}
+
+element {
+  padding: 10px;
+}
+
+element selected {
+  background-color: rgba(137, 180, 250, 0.3);
+}
+
+element-text {
+  horizontal-align: 0.5;
+}
