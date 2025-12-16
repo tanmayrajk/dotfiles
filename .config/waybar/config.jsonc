@@ -1,0 +1,63 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 30,
+
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": [],
+  "modules-right": ["clock", "pulseaudio", "bluetooth", "network", "battery", "tray", "custom/powermenu"],
+
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "format": "{name}"
+  },
+
+  "clock": {
+    "format": "  {:%H:%M}",
+    "format-alt": "  {:%A, %d %B}",
+    "tooltip-format": "<big>{:%A, %d %B}</big>"
+  },
+
+  "pulseaudio": {
+    "format": "  {volume}%",
+    "format-muted": "  {volume}%"
+  },
+
+  "network": {
+    "format-wifi": "  {essid}",
+    "format-ethernet": "󰈀  wired",
+    "format-disconnected": "  offline",
+    "on-click": "kitty nmtui"
+  },
+
+  "bluetooth": {
+    "format": " {status}",
+    "format-disabled": "󰂲 off",
+    "format-connected": " {device_alias}",
+    "on-click": "kitty bluetui"
+  },
+  
+  "battery": {
+    "format": "{icon} {capacity}%",
+    "format-charging": "󰂄 {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-icons": [
+      "󰁺",
+      "󰁻",
+      "󰁼",
+      "󰁽",
+      "󰁾",
+      "󰁿",
+      "󰂀",
+      "󰂁",
+      "󰂂",
+      "󰁹"
+    ]
+  },
+
+  "custom/powermenu": {
+    "format": "⏻",
+    "tooltip": false,
+    "on-click": "powermenu"
+  }
+}
