@@ -1,0 +1,15 @@
+#!/bin/sh
+
+DIR="$HOME/pics/ss"
+mkdir -p "$DIR"
+
+FILE="$DIR/$(date +'%Y-%m-%d_%H-%M-%S').png"
+
+grim "$FILE"
+
+wl-copy < "$FILE"
+
+notify-send \
+	-i "$FILE" \
+	"Screenshot taken" \
+	"$(basename "$FILE") copied to clipboard"

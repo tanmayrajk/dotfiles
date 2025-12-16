@@ -1,0 +1,25 @@
+#!/bin/bash
+
+options="󰐥 Shutdown
+󰜉 Reboot
+󰍃 Logout
+󰒲 Suspend
+󰗽 Lock"
+
+choice=$(printf "%s\n" "$options" | rofi -dmenu \
+  -matching normal \
+  -i \
+  -p "Power" \
+  -config ~/.config/rofi/themes/powermenu.rasi)
+
+confirm=$(printf "No\nYes" | rofi -dmenu -p "Are you sure?" -matching normal)
+ 
+[[ "$confirm" != "Yes" ]] && exit 0
+
+case "$choice" in
+  Shutdown) systemctl poweroff ;;
+  Reboot) systemctl reboot ;;
+  Logout) hyprctl dispatch exit ;;
+  Suspend) systemctl suspend ;;
+  Lock) swaylock ;;
+esac
