@@ -26,10 +26,10 @@ window#waybar {
   /* border-radius: 6px; */
 }
 
-#clock, #battery, #bluetooth, #pulseaudio, #network, #tray, #custom-powermenu {
+#clock, #battery, #bluetooth, #pulseaudio, #network, #tray, #custom-powermenu, #custom-notifs {
   padding: 0 10px;
 }
 
-#custom-powermenu {
-	padding-right: 15px;
-}
+/* #custom-powermenu { */
+/* 	padding-right: 15px; */
+/* } */

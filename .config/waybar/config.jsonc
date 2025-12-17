@@ -5,7 +5,7 @@
 
   "modules-left": ["hyprland/workspaces"],
   "modules-center": [],
-  "modules-right": ["clock", "pulseaudio", "bluetooth", "network", "battery", "tray", "custom/powermenu"],
+  "modules-right": ["clock", "pulseaudio", "bluetooth", "network", "battery", "tray", "custom/notifs", "custom/powermenu"],
 
   "hyprland/workspaces": {
     "disable-scroll": true,
@@ -20,20 +20,20 @@
 
   "pulseaudio": {
     "format": "  {volume}%",
-    "format-muted": "  {volume}%"
+    "format-muted": "  {volume}%",
   },
 
   "network": {
     "format-wifi": "  {essid}",
     "format-ethernet": "󰈀  wired",
     "format-disconnected": "  offline",
-    "on-click": "kitty nmtui"
+    "on-click": "kitty impala"
   },
 
   "bluetooth": {
-    "format": " {status}",
-    "format-disabled": "󰂲 off",
-    "format-connected": " {device_alias}",
+    "format": "󰂯",
+    "format-disabled": "󰂲",
+    "format-connected": "󰂱",
     "on-click": "kitty bluetui"
   },
   
@@ -59,5 +59,19 @@
     "format": "⏻",
     "tooltip": false,
     "on-click": "powermenu"
+  },
+
+  "custom/notifs": {
+    "exec": "swaync-client -swb",
+    "return-type": "json",
+  	"tooltip": false,
+  	"format": "{icon}",
+  	"format-icons": {
+  	  "notification": "",
+  	  "none": ""
+  	},
+  	"on-click": "swaync-client -t",
+  	"on-click-right": "swaync-client -C"
   }
 }
+
